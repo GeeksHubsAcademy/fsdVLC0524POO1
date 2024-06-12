@@ -1,16 +1,45 @@
+const Run = (piloto) => {
+  document.getElementById(piloto).addEventListener("click", () => {
+    const seleccion = cars[piloto];
 
-const Acelerar = () => {
-    console.log("hola")
-}
+    seleccion.acelerar();
+    document.getElementById(piloto).innerHTML = seleccion.velocidadConduccion;
+  });
+};
 
-const carA = document.getElementById("carA")
-const carB = document.getElementById("carB")
+const carA = document.getElementById("carA");
+const carB = document.getElementById("carB");
 
-const mandyCar = new Coche("i8", "BMW", "pink", "hybrid", "8745 LLL", 300, 260, 2000, 7);
-const abraCar = new Coche("gtr", "Nissan", "grey", "explosion", "8555 LLK", 280, 250, 1900, 6);
+const mandyCar = new Coche(
+  "i8",
+  "BMW",
+  "pink",
+  "hybrid",
+  "8745 LLL",
+  300,
+  260,
+  2000,
+  7
+);
+const abraCar = new Coche(
+  "gtr",
+  "Nissan",
+  "grey",
+  "explosion",
+  "8555 LLK",
+  280,
+  250,
+  1900,
+  6
+);
 
-carA.innerHTML = mandyCar.velocidadConduccion
-carB.innerHTML = abraCar.velocidadConduccion
+const cars = {
+  mandyCar: mandyCar,
+  abraCar: abraCar,
+};
+
+carA.innerHTML = mandyCar.velocidadConduccion;
+carB.innerHTML = abraCar.velocidadConduccion;
 
 // document.getElementById("mandyCar").addEventListener("click", ()=> {
 //     mandyCar.acelerar()
@@ -21,7 +50,6 @@ carB.innerHTML = abraCar.velocidadConduccion
 //     abraCar.acelerar()
 //     carB.innerHTML = abraCar.velocidadConduccion
 // })
-
 
 // console.log(`Empieza la carrera y ambos coches estan en ... mandyCar: ${mandyCar.velocidadConduccion} abraCar: ${abraCar.velocidadConduccion}`)
 
