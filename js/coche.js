@@ -1,5 +1,4 @@
-
-export default class Coche {
+ class Coche {
 
     constructor(modelo, marca, color, combustible, matricula, motor, velocidad, peso, potencia){
         this.velocidadConduccion = 0

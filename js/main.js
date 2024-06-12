@@ -1,5 +1,7 @@
 
-import Coche from "./coche.js";
+const Acelerar = () => {
+    console.log("hola")
+}
 
 const carA = document.getElementById("carA")
 const carB = document.getElementById("carB")
@@ -10,15 +12,15 @@ const abraCar = new Coche("gtr", "Nissan", "grey", "explosion", "8555 LLK", 280,
 carA.innerHTML = mandyCar.velocidadConduccion
 carB.innerHTML = abraCar.velocidadConduccion
 
-document.getElementById("mandyCar").addEventListener("click", ()=> {
-    mandyCar.acelerar()
-    carA.innerHTML = mandyCar.velocidadConduccion
-})
+// document.getElementById("mandyCar").addEventListener("click", ()=> {
+//     mandyCar.acelerar()
+//     carA.innerHTML = mandyCar.velocidadConduccion
+// })
 
-document.getElementById("abraCar").addEventListener("click", ()=> {
-    abraCar.acelerar()
-    carB.innerHTML = abraCar.velocidadConduccion
-})
+// document.getElementById("abraCar").addEventListener("click", ()=> {
+//     abraCar.acelerar()
+//     carB.innerHTML = abraCar.velocidadConduccion
+// })
 
 
 // console.log(`Empieza la carrera y ambos coches estan en ... mandyCar: ${mandyCar.velocidadConduccion} abraCar: ${abraCar.velocidadConduccion}`)
